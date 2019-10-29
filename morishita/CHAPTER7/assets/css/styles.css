@@ -3506,7 +3506,7 @@ input {
 
 span.search-highlight {
 	background:yellow;
-} 
+}
 
 .place, .place a {
 	font-size: 1.4rem;
@@ -3551,7 +3551,7 @@ iframe {
 }
 
 .wp-block-media-text.alignwide {
-	margin-top: 11%;	
+	margin-top: 11%;
 	display: flex;
 	align-items: flex-start;
 }
@@ -3734,7 +3734,7 @@ input[type="submit"]::after {
     font-weight: bold;
 }
 .box26 p {
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
 
@@ -3768,7 +3768,7 @@ input[type="submit"]::after {
     font-size: 1.8rem;
     text-align: center;
     line-height: 2;
-    letter-spacing: 0.25em;	
+    letter-spacing: 0.25em;
 }
 
 .contribution article .excerpt {
@@ -3881,7 +3881,7 @@ input[type="submit"]::after {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
-    justify-content: center;	
+    justify-content: center;
 }
 
 .page_navi li {
@@ -3938,9 +3938,9 @@ input[type="submit"]::after {
 	}
 	.privacy h2 + p, .privacy .lead-inner ul {
 	    margin-top: 1.6%;
-    	font-size: 1.2rem;	
+    	font-size: 1.2rem;
 	}
-	
+
 	.privacy .lead-inner ul {
 	    margin-left: 17px;
 	}
@@ -3958,7 +3958,7 @@ input[type="submit"]::after {
 	.lead-inner > p {
 		font-size: 1.4rem;
 	}
-	
+
 	iframe {
 		width: 100%;
 		height: auto;
@@ -3996,11 +3996,11 @@ input[type="submit"]::after {
 	.contribution article .title {
 	    margin-top: 0;
     	padding-bottom: 0;
-    	font-size: 1.3rem;	
+    	font-size: 1.3rem;
 	}
 	.contribution article .excerpt {
 	    margin-top: 8px;
-    	font-size: 1.15rem;	
+    	font-size: 1.15rem;
 	}
 	.contribution article time {
 		font-size: 1rem;
@@ -4047,7 +4047,7 @@ input[type="submit"]::after {
 	.wp-block-table tr:last-child {
 	    border-bottom: none;
 	}
-	
+
 	.wp-block-table tr td:first-child{
     	width: 26%;
     	border-right: 1px solid #d0d0d0;
@@ -4060,14 +4060,14 @@ input[type="submit"]::after {
     	font-size: 1.2rem;
 	}
 	.wp-block-media-text.alignwide {
-		margin-top: 5%;	
+		margin-top: 5%;
 		display: block;
 	}
 
 	.wp-block-media-text.alignwide:last-child {
 		margin-bottom: 5%;
 	}
-	
+
 	.wp-block-media-text.alignwide figure {
 		width: 100%;
 	}
@@ -4080,7 +4080,7 @@ input[type="submit"]::after {
 	    font-size: 1.6rem;
 	    font-weight: 700;
 	}
-	
+
 	.wp-block-media-text.alignwide .wp-block-media-text__content p {
 	    font-size: 1.2rem;
 	    letter-spacing: 0.15em;
@@ -4088,7 +4088,7 @@ input[type="submit"]::after {
 	.place {
 	    font-size: 1rem;
 	    color: #1381d6;
-	}	
+	}
 	/* ぱんくず */
 	.bread_crumb {
 	    padding: 0;

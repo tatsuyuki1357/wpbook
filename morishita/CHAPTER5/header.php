@@ -28,10 +28,10 @@
           <nav class="global-nav">
 <?php
 wp_nav_menu(
-	array (
-		'theme_location' => 'place_global',
-		'container' => false,
-	)
+  array (
+    'theme_location' => 'place_global',
+    'container' => false,
+  )
 );
 ?>
           </nav>
@@ -52,17 +52,17 @@ wp_nav_menu(
     <section class="section-contents" id="keyvisual">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/images/bg-section-keyvisual.jpg" alt="MAIN IMAGE" />
       <div class="wrapper">
-        <h1 class="site-title">Connecting the future.</h1>
+        <h1 class="site-title"><?php bloginfo( 'description' ); ?></h1>
         <p class="site-caption"><?php echo get_the_excerpt(); ?></p>
       </div>
     </section>
 <?php else: ?>
-      <div class="wrap">
-        <div id="primary" class="content-area">
-          <main>
+    <div class="wrap">
+      <div id="primary" class="content-area">
+        <main>
           <div class="page-contents">
             <div class="page-head">
-			  <?php echo get_main_image(); ?>
+<?php echo get_main_image(); ?>
               <div class="wrapper">
                 <span class="page-title-en"></span>
                 <h2 class="page-title"><?php echo get_main_title(); ?></h2>
@@ -70,8 +70,8 @@ wp_nav_menu(
             </div>
             <div class="page-container">
 <?php
-if ( function_exists('bread_crumb') ){
-	bread_crumb();
-}
+if ( function_exists('bread_crumb') ):
+  bread_crumb();
+endif;
 ?>
 <?php endif; ?>

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-			  <div class="page-inner">
+              <div class="page-inner">
                 <div class="page-main" id="pg-error">
                   <div class="dataList-inner">
                     <h3>ページが見つかりません</h3>

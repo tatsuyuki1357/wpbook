@@ -15,7 +15,7 @@ $shop_title = get_the_title();
 <?php
 $shop_pages = get_child_pages( 4, $shop_obj->ID );
 if ( $shop_pages->have_posts() ) :
-	while ( $shop_pages->have_posts() ) : $shop_pages->the_post();
+  while ( $shop_pages->have_posts() ) : $shop_pages->the_post();
 ?>
           <li class="shops-item">
             <a class="shop-link" href="<?php the_permalink(); ?>">
@@ -30,14 +30,14 @@ if ( $shop_pages->have_posts() ) :
             </a>
           </li>
 <?php
-	endwhile;
-	wp_reset_postdata();
+  endwhile;
+  wp_reset_postdata();
 endif;
 ?>
         </ul>
         <div class="section-buttons">
           <button type="button" class="button button-ghost" onclick="javascript:location.href = '<?php echo esc_url( home_url( 'shop' ) ); ?>';">
-            <?php echo $shop_titlel ?>一覧を見る
+            <?php echo $shop_title; ?>一覧を見る
           </button>
         </div>
       </div>
@@ -58,7 +58,7 @@ $contribution_title = get_the_title();
 <?php
 $contribution_pages = get_child_pages( 3, $contribution_obj->ID );
 if ( $contribution_pages->have_posts() ) :
-	while ( $contribution_pages->have_posts() ) : $contribution_pages->the_post();
+  while ( $contribution_pages->have_posts() ) : $contribution_pages->the_post();
 ?>
           <article class="article-card">
             <a class="card-link" href="<?php the_permalink(); ?>">
@@ -75,14 +75,14 @@ if ( $contribution_pages->have_posts() ) :
             </a>
           </article>
 <?php
-	endwhile;
-	wp_reset_postdata();
+  endwhile;
+  wp_reset_postdata();
 endif;
 ?>
         </div>
         <div class="section-buttons">
           <button type="button" class="button button-ghost" onclick="javascript:location.href = '<?php echo esc_url( home_url( 'contribution' ) ); ?>';">
-            <?php echo $contribution_title; ?>一覧を見る
+            <?php echo $contribution_title; ?>を見る
           </button>
         </div>
       </div>
@@ -95,20 +95,25 @@ endif;
         <p class="section-lead"><?php echo $term_obj->description; ?></p>
         <ul class="news">
 <?php
+$args = array(
+  'post_type' => 'post',
+  'category_name' => ‘news’ ,
+  'posts_per_page' => 3,
+);
 $news_posts = get_specific_posts( 'post', 'category', 'news', 3 );
 if( $news_posts->have_posts() ):
-	while( $news_posts->have_posts() ): $news_posts->the_post();
+  while( $news_posts->have_posts() ): $news_posts->the_post();
 ?>
           <li class="news-item">
             <a class="detail-link" href="<?php the_permalink(); ?>">
-              <time class="time"><?php the_time( 'Y.m.d' ); ?></time>
+              <time class="time"><?php the_time('Y.m.d'); ?></time>
               <p class="title"><?php the_title(); ?></p>
               <p class="news-text"><?php echo get_the_excerpt(); ?></p>
             </a>
           </li>
 <?php
-	endwhile;
-	wp_reset_postdata();
+  endwhile;
+  wp_reset_postdata();
 endif;
 ?>
         </ul>
@@ -131,7 +136,7 @@ setup_postdata( $post );
         <p class="section-lead"><?php echo get_the_excerpt(); ?></p>
         <div class="section-buttons">
           <button type="button" class="button button-ghost" onclick="javascript:location.href = '<?php echo esc_url( home_url( 'company' ) ); ?>';">
-            <?php the_title(); ?>一覧を見る
+            <?php the_title(); ?>を見る
           </button>
         </div>
 <?php wp_reset_postdata(); ?>

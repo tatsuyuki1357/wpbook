@@ -9,8 +9,8 @@ add_action( 'wp_enqueue_scripts', 'my_enqueue_scripts' );
 // ヘッダー、フッターのカスタムメニュー化
 register_nav_menus(
 	array(
-		'place_global' => ' グローバル',
-		'place_footer' => ' フッターナビ',
+		'place_global' => ' グローバル ',
+		'place_footer' => ' フッターナビ ',
 	)
 );
 
@@ -29,10 +29,10 @@ function get_main_title() {
 // 子ページを取得する関数
 function get_child_pages( $number = -1, $specified_id = null ) {
 	if ( isset( $specified_id ) ):
-		$parent_id = $specified_id;
-	else:
-		$parent_id = get_the_ID();
-	endif;
+  	$parent_id = $specified_id;
+  else:
+  	$parent_id = get_the_ID();
+  endif;
 	$args = array(
 		'posts_per_page' => $number,
 		'post_type' => 'page',
@@ -46,22 +46,16 @@ function get_child_pages( $number = -1, $specified_id = null ) {
 
 // アイキャッチ画像を利用できるようにする
 add_theme_support( 'post-thumbnails' );
-
 // トップページのメイン画像用のサイズ設定
 add_image_size( 'top', 1077, 622, true );
-
 // 地域貢献活動一覧画像用のサイズ設定
 add_image_size( 'contribution', 557, 280, true );
-
 // トップページの地域貢献活動にて使用している画像用のサイズ設定
 add_image_size( 'front-contribution', 255, 189, true );
-
 // 企業情報・店舗情報一覧画像用のサイズ設定
 add_image_size( 'common', 465, 252, true );
-
 // 各ページのメイン画像用のサイズ設定
 add_image_size( 'detail', 1100, 330, true );
-
 // 検索一覧画像用のサイズ設定
 add_image_size( 'search', 168, 168, true );
 

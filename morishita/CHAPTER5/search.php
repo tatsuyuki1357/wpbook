@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-			  <div class="page-inner">
+              <div class="page-inner">
                 <div class="page-main" id="pg-search">
                   <form class="search-form" role="search" method="get" action="<?php echo esc_url( home_url() ); ?>">
                     <div class="search-box">
@@ -17,7 +17,7 @@
                     <ul class="searchResultLlist">
 <?php
 if ( have_posts() && get_search_query() ) :
-	while ( have_posts() ) : the_post();
+  while ( have_posts() ) : the_post();
 ?>
                       <li class="searchResultLlist-item">
                         <a href="<?php the_permalink(); ?>">
@@ -26,9 +26,9 @@ if ( have_posts() && get_search_query() ) :
 <?php
 $image = get_the_post_thumbnail( $post->ID, 'search' );
 if ( $image ):
-	echo $image;
+  echo $image;
 else:
-	echo '<img src="'. get_template_directory_uri(). '/assets/images/img-noImage.png">';
+  echo '<img src="'. get_template_directory_uri(). '/assets/images/img-noImage.png">';
 endif;
 ?>
                             </div>
@@ -45,13 +45,13 @@ endif;
                       <ul class="pagerList">
 <?php
 if ( function_exists( 'page_navi' ) ):
-	page_navi();
+  page_navi();
 endif;
 ?>
                       </ul>
                     </div>
 <?php elseif( ! get_search_query() ): ?>
-                    <p> 検索ワードが入力されていません</p>
+                    <p> 検索ワードが入力されていません </p>
 <?php else: ?>
                     <p> 該当する記事は見つかりませんでした。</p>
 <?php endif; ?>

@@ -28,10 +28,10 @@
           <nav class="global-nav">
 <?php
 wp_nav_menu(
-	array (
-		'theme_location' => 'place_global',
-		'container' => false,
-	)
+  array (
+    'theme_location' => 'place_global',
+    'container' => false,
+  )
 );
 ?>
           </nav>
@@ -61,16 +61,17 @@ wp_nav_menu(
       </div>
     </section>
 <?php else: ?>
-      <div class="wrap">
-        <div id="primary" class="content-area">
-          <main>
+    <div class="wrap">
+      <div id="primary" class="content-area">
+        <main>
           <div class="page-contents">
             <div class="page-head">
-			  <?php echo get_main_image(); ?>
+<?php echo get_main_image(); ?>
               <div class="wrapper">
                 <span class="page-title-en"></span>
                 <h2 class="page-title"><?php echo get_main_title(); ?></h2>
               </div>
             </div>
             <div class="page-container">
+
 <?php endif; ?>

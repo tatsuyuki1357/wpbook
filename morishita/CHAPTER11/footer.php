@@ -1,14 +1,14 @@
 <?php if( ! is_front_page() ): ?>
-            </div>
-          </div>
-        </main>
+        </div>
       </div>
-    </div>
+    </main>
+  </div>
+</div>
 <?php endif;
 if ( ! $footer_cache = get_transient( 'footer_cache' ) ):
-ob_start();
+  ob_start();
 ?>
-	<footer class="footer" id="footer">
+    <footer class="footer" id="footer">
       <div class="footerContents">
         <div class="footerContents-contact">
           <div class="enterprise-logo">
@@ -26,12 +26,13 @@ ob_start();
           <nav class="footer-nav">
 <?php
 wp_nav_menu(
-	array (
-		'theme_location' => 'place_footer',
-		'container' => false,
-	)
+  array (
+    'theme_location' => 'place_footer',
+    'container' => false,
+  )
 );
 ?>
+
           </nav>
         </div>
         <ul class='sns-navi'>
@@ -45,8 +46,8 @@ wp_nav_menu(
       </p>
     </footer>
 <?php
-$footer_cache = ob_get_clean();
-set_transient( 'footer_cache', $footer_cache, 60 * 5 );
+  $footer_cache = ob_get_clean();
+  set_transient( 'footer_cache', $footer_cache, 60 * 5 );
 else:
 echo $footer_cache;
 endif;

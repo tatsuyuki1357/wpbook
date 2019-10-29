@@ -5,8 +5,9 @@
 $image_id = get_field( 'event_image', $term->taxonomy. '_'. $term->term_id );
 echo wp_get_attachment_image( $image_id, 'contribution' );
 ?>
-						</div>
+                        </div>
                         <div class="body">
+                          <time><?php the_time( 'Y.m.d' ); ?></time>
                           <p class="title"><?php echo $term->name; ?></p>
                           <p class="excerpt"><?php echo $term->description; ?></p>
                           <div class="buttonBox">
